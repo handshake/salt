@@ -1,0 +1,12 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# Source any bashrc includes
+BASHRC_INCLUDES_D=~/.bashrc_includes
+if [ -e $BASHRC_INCLUDES_D ]; then
+  for f in $BASHRC_INCLUDES_D/*; do source $f; done
+fi
